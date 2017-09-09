@@ -38,7 +38,7 @@ class DiseasesTableViewController: UITableViewController, UISearchBarDelegate {
                 disease.key = snapshot.key
                 disease.symptom1 = dict["symptom1"] as! String
                 disease.symptom2 = dict["symptom2"] as! String
-               // disease.symptom3 = dict["symptom3"] as! String
+                disease.symptom3 = dict["symptom3"] as! String
                 self.diseases.append(disease)
                 self.tableView.reloadData()
             }

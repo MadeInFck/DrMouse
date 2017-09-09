@@ -212,23 +212,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q5-WQ-LVI">
-                                <rect key="frame" x="40" y="154" width="334" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBc-bh-EBN">
+                                <rect key="frame" x="30" y="214" width="354" height="40"/>
                                 <color key="backgroundColor" red="0.1195367133" green="0.62240493880000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="MWw-gX-Wqs"/>
+                                    <constraint firstAttribute="height" constant="40" id="4BJ-mf-NgI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.98754522170000003" blue="0.99784384829999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn3-7g-hqD">
+                                <rect key="frame" x="30" y="374" width="354" height="40"/>
+                                <color key="backgroundColor" red="0.1195367133" green="0.62240493880000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lku-jK-9Vt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0l-2e-M52">
+                                <rect key="frame" x="30" y="294" width="354" height="40"/>
+                                <color key="backgroundColor" red="0.1195367133" green="0.62240493880000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="v3m-R6-N7n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2q5-WQ-LVI" firstAttribute="leading" secondItem="Chx-lZ-Qd8" secondAttribute="leadingMargin" constant="20" id="5tr-dl-5Yf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2q5-WQ-LVI" secondAttribute="trailing" constant="20" id="X3M-po-FFP"/>
-                            <constraint firstItem="2q5-WQ-LVI" firstAttribute="top" secondItem="SHT-SI-5O4" secondAttribute="bottom" constant="90" id="r7c-BW-OjM"/>
+                            <constraint firstItem="zBc-bh-EBN" firstAttribute="leading" secondItem="Chx-lZ-Qd8" secondAttribute="leadingMargin" constant="10" id="5Im-j3-rRy"/>
+                            <constraint firstItem="N0l-2e-M52" firstAttribute="top" secondItem="zBc-bh-EBN" secondAttribute="bottom" constant="40" id="N1g-sr-ufX"/>
+                            <constraint firstItem="Fn3-7g-hqD" firstAttribute="top" secondItem="N0l-2e-M52" secondAttribute="bottom" constant="40" id="RFh-OA-VvE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fn3-7g-hqD" secondAttribute="trailing" constant="10" id="UFr-dS-Egy"/>
+                            <constraint firstItem="zBc-bh-EBN" firstAttribute="top" secondItem="SHT-SI-5O4" secondAttribute="bottom" constant="150" id="Z4s-J1-mFx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N0l-2e-M52" secondAttribute="trailing" constant="10" id="hCH-JG-56j"/>
+                            <constraint firstItem="Fn3-7g-hqD" firstAttribute="leading" secondItem="Chx-lZ-Qd8" secondAttribute="leadingMargin" constant="10" id="hyA-88-NAG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zBc-bh-EBN" secondAttribute="trailing" constant="10" id="io8-CR-nBh"/>
+                            <constraint firstItem="N0l-2e-M52" firstAttribute="leading" secondItem="Chx-lZ-Qd8" secondAttribute="leadingMargin" constant="10" id="jfk-l7-FY2"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -242,12 +267,14 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backViewButton" destination="TK3-YQ-o4a" id="iIx-Gi-YfU"/>
-                        <outlet property="symptom1Label" destination="2q5-WQ-LVI" id="p5s-F3-6Mm"/>
+                        <outlet property="symptom1Label" destination="zBc-bh-EBN" id="AcD-mR-14N"/>
+                        <outlet property="symptom2Label" destination="N0l-2e-M52" id="IXF-4d-5O8"/>
+                        <outlet property="symptom3Label" destination="Fn3-7g-hqD" id="Pa1-4n-Vsr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxt-lC-MDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891" y="1552"/>
+            <point key="canvasLocation" x="1889.8550724637682" y="1551.358695652174"/>
         </scene>
         <!--NewDiseaseViewController-->
         <scene sceneID="9hE-Ju-qwl">
@@ -430,7 +457,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k6P-vr-DYn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k6P-vr-DYn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.85078007411572365" blue="0.3125165176383764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
