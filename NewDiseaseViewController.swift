@@ -2,7 +2,7 @@
 //  NewDiseaseViewController.swift
 //  DrMouse
 //
-//  Created by Mickael Fonck on 15/08/2016.
+//  Created by Mickael Fonck on 01/09/2017.
 //  Copyright © 2016 Mickael Fonck. All rights reserved.
 //
 
@@ -20,6 +20,8 @@ class NewDiseaseViewController: UIViewController {
     @IBOutlet weak var thirdSymptomLabel: UILabel!
     @IBOutlet weak var thirdSymptomTextfield: UITextField!
     @IBOutlet weak var diseaseTextfield: UITextField!
+    @IBOutlet weak var firstSymptomLabel: UILabel!
+    @IBOutlet weak var newDiseaseLabel: UILabel!
     
     var numSymptom = 1
     var ref:DatabaseReference!
@@ -31,7 +33,14 @@ class NewDiseaseViewController: UIViewController {
         self.backButtonItemOutlet.setTitleTextAttributes([NSFontAttributeName : UIFont(name: "Pacifico", size: 15)!], for: UIControlState())
         self.addButtonItemOutlet.setTitleTextAttributes([NSFontAttributeName : UIFont(name: "Pacifico", size: 15)!], for: UIControlState())
         
-        
+        newDiseaseLabel.layer.cornerRadius = 5
+        newDiseaseLabel.layer.masksToBounds = true
+        firstSymptomLabel.layer.cornerRadius = 5
+        firstSymptomLabel.layer.masksToBounds = true
+        secondSymptomLabel.layer.cornerRadius = 5
+        secondSymptomLabel.layer.masksToBounds = true
+        thirdSymptomLabel.layer.cornerRadius = 5
+        thirdSymptomLabel.layer.masksToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,10 +64,20 @@ class NewDiseaseViewController: UIViewController {
                 disease["symptom2"] = self.secondSymptomTextfield.text!
                 if thirdSymptomTextfield.isHidden == false && thirdSymptomTextfield.text != "" {
                     disease["symptom3"] = self.thirdSymptomTextfield.text!
+                } else if thirdSymptomTextfield.isHidden == false && thirdSymptomTextfield.text == "" {
+                    symptomsAlert()
+                    return
                 }
+            } else if secondSymptomTextfield.isHidden == false && secondSymptomTextfield.text == "" {
+                symptomsAlert()
+                return
             }
             self.ref.child("diseases").childByAutoId().setValue(disease)
+        } else {
+            symptomsAlert()
+            return
         }
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -73,8 +92,16 @@ class NewDiseaseViewController: UIViewController {
             self.thirdSymptomTextfield.isHidden = false
             numSymptom += 1
             print(numSymptom, terminator: "")
+        } else {
+            symptomsAlert()
+            return
         }
-        
     }
     
+    func symptomsAlert() {
+        let alertController = UIAlertController(title: "Caution", message: "Please fill in all the symptoms fields", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

@@ -18,9 +18,9 @@ class LogginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var SignUpButtonSegue: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var logo: UILabel!
 
     var backgroundImage : UIImageView!
-    var logo : UILabel!
     var twitterButton : UIButton!
     var userName = ""
     var ref:DatabaseReference!
@@ -34,13 +34,12 @@ class LogginViewController: UIViewController,UITextFieldDelegate {
         backgroundImage.contentMode = UIViewContentMode.scaleToFill
         self.view.insertSubview(backgroundImage, at: 0)
         
-        let logo = UILabel()
+     
         logo.text = "Dr. Mouse"
         logo.textColor = UIColor.white
         logo.font = UIFont(name: "Pacifico", size: 50)
         logo.shadowColor = UIColor.lightGray
         logo.shadowOffset = CGSize(width: 2, height: 2)
-        self.logo = logo
         self.view.addSubview(self.logo)
         
         customizeButton(LogInButton)
